@@ -1,4 +1,7 @@
 steps:
+# ################################
+# Verify Verstion
+# ################################
 - id: 'version'
   name: 'gcr.io/yzhang-test-personal-project/mirror-mydesktop'
   entrypoint: 'bash'
