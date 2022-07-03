@@ -1,0 +1,21 @@
+steps:
+- id: 'mybuild'
+  name: 'gcr.io/mimetic-oxide-354413/mybuild'
+  entrypoint: 'bash'
+  args: 
+  - '-c'
+  - |
+    # check Linux version
+    uname -a
+    ls /etc/*release
+    cat /etc/lsb-release
+    
+    # check terraform version
+    terraform version
+    
+    # check python version
+    python3 --version
+    python3 -m pip --version
+
+    # check google SDK version
+    gcloud version
