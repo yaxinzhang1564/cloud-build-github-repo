@@ -1,6 +1,6 @@
 steps:
-- id: 'mybuild'
-  name: 'gcr.io/mimetic-oxide-354413/mybuild'
+- id: 'version'
+  name: 'gcr.io/yzhang-test-personal-project/mirror-mydesktop'
   entrypoint: 'bash'
   args: 
   - '-c'
