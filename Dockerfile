@@ -9,10 +9,10 @@ FROM ubuntu:20.04
 RUN \
 apt-get update -y && \
 apt-get install -y \
-  wget
-  curl
-  apt-transport-https
-  ca-certificates
+  wget \
+  curl \
+  apt-transport-https\
+  ca-certificates \
   gnupg
 
 # ################################
