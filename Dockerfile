@@ -8,7 +8,7 @@ FROM ubuntu:20.04
 # ################################
 RUN \
 apt-get update -y && \
-apt-get install -y curl apt-transport-https ca-certificates gnupg
+apt-get install -y wget curl apt-transport-https ca-certificates gnupg
 
 # ################################
 # Install Google SDK
@@ -25,4 +25,5 @@ apt-get install google-cloud-cli -y
 # Install Terraform 0.13.6
 # ################################
 RUN \
-wget https://releases.hashicorp.com/terraform/0.13.6/terraform_0.13.6_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/0.13.6/terraform_0.13.6_linux_amd64.zip && \
+unzip terraform_0.13.6_linux_amd64.zip
