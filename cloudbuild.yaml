@@ -1,6 +1,9 @@
 steps:
+- id: 'builder' 
+  name: 'gcr.io/yzhang-test-personal-project/mirror-mydesktop'
+
 # ################################
-# Verify Verstion
+# Verify Version
 # ################################
 - id: 'version'
   name: 'gcr.io/yzhang-test-personal-project/mirror-mydesktop'
@@ -8,17 +11,44 @@ steps:
   args: 
   - '-c'
   - |
-    # check Linux version
+    echo '\n\n'
+    echo '#######################'
+    echo '# check folder'
+    echo '#######################'
+    pwd
+    ls -al
+    cd /workspace/.ssh
+    ls -al
+
+
+    echo '#######################'
+    echo '# check Linux version'
+    echo '#######################'
     uname -a
     ls /etc/*release
     cat /etc/lsb-release
-    
-    # check terraform version
+
+    echo '#######################'
+    echo '# check Terraform version'
+    echo '#######################'    
     terraform version
-    
-    # check python version
-    python3 --version
+
+    echo '#######################'
+    echo '# check Python version'
+    echo '#######################'    
+    python3 -V
     python3 -m pip --version
 
-    # check google SDK version
+    echo '#######################'
+    echo '# check Google SDK version'
+    echo '#######################'
     gcloud version
+
+    echo '#######################'
+    echo '# check repo'
+    echo '#######################'
+
+    echo '#######################'
+    echo '# check python script'
+    echo '#######################'
+    
