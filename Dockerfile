@@ -8,7 +8,12 @@ FROM ubuntu:20.04
 # ################################
 RUN \
 apt-get update -y && \
-apt-get install -y wget curl apt-transport-https ca-certificates gnupg
+apt-get install -y \
+  wget
+  curl
+  apt-transport-https
+  ca-certificates
+  gnupg
 
 # ################################
 # Install Google SDK
